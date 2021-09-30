@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+
+  <script src="todo.js" defer></script>
+<style>
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: silver;
+}
+.ft_list {
+  background-color: seashell;
+  box-shadow: -14px -14px 20px 0px rgba(255, 255, 255, 0.17),
+    15px 15px 25px 0px rgba(0, 0, 0, 0.16);
+  width: 500px;
+  height: calc(100vh - 100px);
+  border-radius: 10px;
+  margin: 50px auto;
+  padding: 4vh 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  color: #808080;
+  width: 80%;
+}
+
+.form {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input:focus {
+  outline: none;
+}
+
+.text {
+  width: 85%;
+  background-color: transparent;
+  height: 30px;
+  border: none;
+  border-bottom: 2px solid gray;
+  padding: 10px;
+  color: silver;
+}
+
+.text::placeholder {
+  padding: 10px;
+  color: darkgray;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.add {
+  width: 15%;
+  background-color: grey;
+  color: seashell;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 0;
+  font-weight: bold;
+}
+
+.add:active {
+  color: #606060;
+}
+
+.list {
+  width: 70%;
+  height: 320px;
+  list-style: none;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column-reverse;
+  padding: 0;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+}
+
+button:focus{
+  outline: none;
+}
+
+.list-element {
+  color: #808080;
+  font-weight: 600;
+  opacity: 1;
+}
+
+.done {
+  opacity: 0.6;
+}
+</style>
+
+</head>
+<body onload="checkForObjectives()">
+	<div class="ft_list">
+		<h1 class="title">To do list</h1>
+		<div class="form">
+			<input type="text" id="objective" class="text" placeholder="to do" autocomplete='off' maxlength='64' onKeyPress='enter(event, this)'>
+			<button class="add" onClick='addItem()'>New</button>
+		</div>
+		<ul id="list">
+		</ul>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+body {
+	margin: 0;
+	font-family: arial;
+	font-size: 16px;
+	line-height: 1.8em;
+  }
+  
+  a {
+	color: orange;
+	text-decoration: none;
+  }
+
+/*198*/
+
+.ft_arial2 {
+	margin-top: -84px;
+	margin-left: 215px;
+	font-family: arial;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.ft_ariald {
+	margin-top: -15px;
+	margin-left: 10px;
+	font-family: arial;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.ft_capital {
+	margin-top: -77px;
+	margin-left: 68px;
+	font-family: arial;
+	font-size: 60px;
+	font-weight: 200;
+}

@@ -1,0 +1,52 @@
+.botonMenu
+{
+   margin: 0 auto;
+   display: block;
+   width: 40px;
+   height: 36px;
+   padding: 10px;
+   border-radius: 7px;
+   background: #666;
+   color: white;
+   cursor: pointer;
+   position: relative;
+}
+
+.botonMenu span
+{
+   display: block;
+   width: 40px;
+   height: 4px;
+   background: white;
+   margin-top: 7px;
+}
+
+label
+{
+   cursor: pointer;
+}
+
+#menu-toggle
+{
+   display: none;
+}
+
+#trickMenu
+{
+   display: none;
+   text-align: center;
+   background: white;
+   padding: 10px 0;
+}
+
+#trickMenu li a
+{
+   display: block;
+   padding: 10px 0;
+   color: black;
+}
+
+#menu-toggle:checked + #trickMenu
+{
+   display: block;
+}
