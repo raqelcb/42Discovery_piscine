@@ -21,10 +21,9 @@
 
 <br>
 
-<center>
-  <img src="https://badge42.vercel.app/api/v2/cl2hcosph023109mprtoo9c0w/stats?cursusId=3&coalitionId=piscine"> </a>
-  
-</center>
+<div align="center">
+  <img src="https://badge42.vercel.app/api/v2/cl2hcosph023109mprtoo9c0w/stats?cursusId=3&coalitionId=66"> </a> 
+</div>
 
 <br>
 
