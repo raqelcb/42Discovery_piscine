@@ -22,7 +22,8 @@
 <br>
 
 <center>
-  <img src="https://badge42.herokuapp.com/api/stats/rcuesta-?privacyEmail=true&darkmode=true&cursus=Discovery%20Piscine"> </a>
+  <img src="https://badge42.vercel.app/api/v2/cl2hcosph023109mprtoo9c0w/stats?cursusId=3&coalitionId=piscine"> </a>
+  
 </center>
 
 <br>
