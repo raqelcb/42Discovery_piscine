@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calc</title>
+	<style>
+		body, html {
+			background-color: #F7F7F7;
+			color: #7DA2A9;
+			height: 100%;
+		}
+
+		h1 {
+			font-family: Helvetica;
+			text-align: center;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin: 0 auto;
+			height: 92%;
+			width: 50%;
+			align-items: center;
+
+		}
+
+		.calculatorLine {
+			display: flex;
+			flex-direction: row;
+		}
+
+		#inputField {
+			border-color: #7DA2A9;
+			background-color: #F7F7F7;
+			color: #7DA2A9;
+			outline: none;
+			width: 50%;
+		}
+
+		#inputButton {
+			background-color: #7DA2A9;
+			color: #F7F7F7;
+			width: 20%;
+			margin-left: 2px;
+		}
+
+		#selectMenu {
+			background-color: #7DA2A9;
+			color: #F7F7F7;
+			margin-left: 2px;
+			margin-right: 2px;
+		}
+
+		#result {
+			margin-top: 4px;
+			width: 104%;
+			background-color: #F7F7F7;
+			color: #7DA2A9;
+			text-align: center;
+			font-size: 42px;
+			outline: none;
+			border: none;
+		}
+
+		input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+		}
+
+		input[type=number] {
+ 		 -moz-appearance: textfield;
+		}
+	</style>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<h1>Awesome Calculator</h1>
+		<div class="calculatorLine">
+			<input type="number" id="numLeft">
+			<select id="selectMenu">
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+				<option value="%">%</option>
+			</select>
+			<input type="number" id="numRight">
+			<input type="submit" id="inputButton" value="Try me!"">
+		</div>
+		<input type="number" id="result" readonly></input>
+	</div>
+
+	<script type="text/javascript">
+		setInterval(function(){alert("Please, use me...")}, 30000);
+
+		$(document).ready(function() {
+			$("#inputButton").click(calculate);
+		})
+
+		function	calculate() {
+			var operation = $("#selectMenu").val();
+			var numLeft = parseFloat($("#numLeft").val());
+			var numRight = parseFloat($("#numRight").val());
+
+			if (!Number.isInteger(numLeft) || !Number.isInteger(numRight)
+				|| Number.isNaN(numLeft)|| Number.isNaN(numRight)
+				|| numLeft < 0 || numRight < 0) {
+				alert("Error :(");
+				return;
+			}
+			if (operation== "+")
+				res = numLeft + numRight;
+			else if (operation== "-")
+				res = numLeft - numRight;
+			else if (operation== "*")
+				res = numLeft * numRight;
+			else if (operation== "/") {
+				if (numRight == 0) {
+					console.log("It's over 9000!");
+					alert("It's over 9000!")
+					return ;
+				}
+				res = numLeft / numRight;
+			}
+			if (operation== "%") {
+				if (numRight == 0) {
+					console.log("It's over 9000!");
+					alert("It's over 9000!")
+					return ;
+				}
+				res = numLeft % numRight;
+			}
+			$("#result").val(res);
+			console.log(res);
+			alert(res);
+		}
+	</script>
+</body>
+</html>

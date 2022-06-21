@@ -1,0 +1,35 @@
+body {
+	margin: 0;
+}
+
+div {
+	text-align: center;
+	color: white;
+}
+
+.parallax {
+	background-color: black;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+
+.text {
+	position: relative;
+	top: 50%;
+}
+
+.block {
+	background-color: black;
+	height: 1000px;
+}
+
+#img1 {
+	background-image: url("https://placekitten.com/g/400/300");
+}
+
+#img2 {
+	background-image: url("https://placekitten.com/g/400/400");
+}

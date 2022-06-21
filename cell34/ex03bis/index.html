@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Todo</title>
+	<style>
+		:root {
+			--white:	#E8EAE3;
+			--black:	#373833;
+			--red: 		#FA2742;
+		}
+
+		body {
+			font-family: "Helvetica Neue";
+			background-color: var(--white);
+			color: var(--black);
+			margin: 0;
+		}
+
+		button {
+			font-family: "Helvetica Neue";
+			background-color: var(--white);
+			color: var(--black);
+			width: 6vh;
+			height: 3vh;
+			outline: none;
+			font-size: 2vh;
+			border: none;
+		}
+
+		button:active {
+			background-color: #f2f5ec;
+		}
+
+		h1 {
+			font-size: 5vh;
+			color: var(--black);
+			margin-bottom: 0;
+		}
+
+		hr {
+			width: 60vw;
+		}
+
+		#ft_list {
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+			text-align: center;
+			align-items: center;
+			justify-content: start;
+			height: 99vh;
+			width: auto;
+		}
+
+		#todo {
+			margin-top: 2vh;
+			font-family: Georgia;
+		}
+
+		.todo {
+			font-size: 3vh;
+			padding: 0.5vh;
+		}
+	</style>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="todo.js"></script>
+</head>
+<body>
+	<div id="ft_list">
+		<h1>Awesome to-do list</h1>
+		<hr>
+		<button id="new"><span class="fa fa-plus-circle"></span></button>
+		<div id="todo"></div>
+	</div>
+</body>
+</html>

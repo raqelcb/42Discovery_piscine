@@ -1,0 +1,63 @@
+body, html {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	font: 400 15px/1.8 "Lato", sans-serif;
+	color: black;
+}
+table {
+	padding: -1px;
+}
+thead {
+	height: 100px;
+	font: 20px "Lato", sans-serif;
+}
+
+.center {
+	height: 600px;
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+td {
+	text-align: center;
+	width: 100%;
+	display: block;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+tbody {
+	width: 400px;
+	height: 500px;
+	box-shadow: 0px 0px 10px #777;
+}
+
+.user {
+	margin: 15px 0 15px 0;
+	font: 30px "Lato", sans-serif;
+}
+
+.level {
+	margin: 15px 0 15px 0;
+	font: 15px "Lato", sans-serif;
+	color: grey;
+}
+
+.icons {
+	margin: 60px 0 0 0;
+}
+.contact {
+	margin: 99px 0 0 0;
+	font: 15px "Lato", sans-serif;
+	color: white;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}

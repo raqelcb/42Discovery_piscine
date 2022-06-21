@@ -1,0 +1,21 @@
+body, html {
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	font: "Fantasy";
+	margin: 0;
+}
+
+.balloon {
+	height: 200px;
+	width: 200px;
+	background-color: red;
+	border-radius: 50%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	transition: all 0.2s ease-in;
+}
