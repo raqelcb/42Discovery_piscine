@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Calc</title>
 	<style>
-		body, html {
+		body,
+		html {
 			background-color: #F7F7F7;
 			color: #7DA2A9;
 			height: 100%;
@@ -65,13 +67,14 @@
 			border: none;
 		}
 
-		input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
-		-webkit-appearance: none;
-		margin: 0;
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
 		}
 
 		input[type=number] {
- 		 -moz-appearance: textfield;
+			-moz-appearance: textfield;
 		}
 	</style>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -92,53 +95,51 @@
 			<input type="number" id="numRight">
 			<input type="submit" id="inputButton" value="Try me!"">
 		</div>
-		<input type="number" id="result" readonly></input>
-	</div>
+		<input type=" number" id="result" readonly></input>
+		</div>
+		<script type="text/javascript">
+			setInterval(function () { alert("Please, use me...") }, 30000);
 
-	<script type="text/javascript">
-		setInterval(function(){alert("Please, use me...")}, 30000);
+			$(document).ready(function () {
+				$("#inputButton").click(calculate);
+			})
+			function calculate() {
+				var operation = $("#selectMenu").val();
+				var numLeft = parseFloat($("#numLeft").val());
+				var numRight = parseFloat($("#numRight").val());
 
-		$(document).ready(function() {
-			$("#inputButton").click(calculate);
-		})
-
-		function	calculate() {
-			var operation = $("#selectMenu").val();
-			var numLeft = parseFloat($("#numLeft").val());
-			var numRight = parseFloat($("#numRight").val());
-
-			if (!Number.isInteger(numLeft) || !Number.isInteger(numRight)
-				|| Number.isNaN(numLeft)|| Number.isNaN(numRight)
-				|| numLeft < 0 || numRight < 0) {
-				alert("Error :(");
-				return;
-			}
-			if (operation== "+")
-				res = numLeft + numRight;
-			else if (operation== "-")
-				res = numLeft - numRight;
-			else if (operation== "*")
-				res = numLeft * numRight;
-			else if (operation== "/") {
-				if (numRight == 0) {
-					console.log("It's over 9000!");
-					alert("It's over 9000!")
-					return ;
+				if (!Number.isInteger(numLeft) || !Number.isInteger(numRight)
+					|| Number.isNaN(numLeft) || Number.isNaN(numRight)
+					|| numLeft < 0 || numRight < 0) {
+					alert("Error :(");
+					return;
 				}
-				res = numLeft / numRight;
-			}
-			if (operation== "%") {
-				if (numRight == 0) {
-					console.log("It's over 9000!");
-					alert("It's over 9000!")
-					return ;
+				if (operation == "+")
+					res = numLeft + numRight;
+				else if (operation == "-")
+					res = numLeft - numRight;
+				else if (operation == "*")
+					res = numLeft * numRight;
+				else if (operation == "/") {
+					if (numRight == 0) {
+						console.log("It's over 9000!");
+						alert("It's over 9000!")
+						return;
+					}
+					res = numLeft / numRight;
 				}
-				res = numLeft % numRight;
+				if (operation == "%") {
+					if (numRight == 0) {
+						console.log("It's over 9000!");
+						alert("It's over 9000!")
+						return;
+					}
+					res = numLeft % numRight;
+				}
+				$("#result").val(res);
+				console.log(res);
+				alert(res);
 			}
-			$("#result").val(res);
-			console.log(res);
-			alert(res);
-		}
-	</script>
+		</script>
 </body>
 </html>

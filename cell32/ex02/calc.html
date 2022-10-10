@@ -5,87 +5,81 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Calculator</title>
+	<script>
+		function calcuMath() {
+			var z;
+			var x = parseInt(document.getElementById("firstNum").value, 10);
+			console.log(x);
+			var y = parseInt(document.getElementById("secNum").value, 10);
+			var sel = document.getElementById("fallDown");
+			var selection = sel.options[sel.selectedIndex].value;
+			var more = document.getElementById("add");
+			var rest = document.getElementById("less");
+			var multi = document.getElementById("multi");
+			var divi = document.getElementById("divi");
+			var modul = document.getElementById("modul");
+			if (selection == "add") {
+				z = parseFloat(x) + parseFloat(y);
+			}
+			if (selection == "less") {
+				z = parseFloat(x) - parseFloat(y);
+			}
+			if (selection == "multi") {
+				z = parseFloat(x) * parseFloat(y);
+			}
+			if (selection == "divi") {
+				z = parseFloat(x) / parseFloat(y);
+			}
+			if (selection == "modul") {
+				z = parseFloat(x) % parseFloat(y);
+			}
+			function valideKey(evt) {
+				var code = (evt.which) ? evt.which : evt.keyCode;
+				if (code == 45) {
+					return false;
+				} else if ((code >= 48 && code <= 57) && (code == 8)) {
+					return true;
+				} else {
+					return false;
+				}
+			}
 
-<script>
-	function calcuMath() {
-    var z;
-    var x = parseInt(document.getElementById("firstNum").value, 10);
-		console.log(x);
-	var y = parseInt(document.getElementById("secNum").value, 10);
-    var sel = document.getElementById("fallDown");
-    var selection = sel.options[sel.selectedIndex].value;
-    var more = document.getElementById("add");
-    var rest = document.getElementById("less");
-    var multi = document.getElementById("multi");
-    var divi = document.getElementById("divi");
-	var modul = document.getElementById("modul");
-    if (selection == "add") {
-        z = parseFloat(x) + parseFloat(y);
-    }
-	if (selection == "less") {
-		z = parseFloat(x) - parseFloat(y);
-	}
-	if (selection == "multi") {
-		z = parseFloat(x) * parseFloat(y);
-	}
-	if (selection == "divi") {
-		z = parseFloat(x) / parseFloat(y);
-	}
-	if (selection == "modul") {
-		z = parseFloat(x) % parseFloat(y);
-	}
+			if (x >= 0 && y >= 0) {
+				document.getElementById("result").innerHTML = "The result is " + z + ".";
+				alert(document.getElementById("result").innerHTML);
+				console.log(z);
 
-	function valideKey(evt){ 
-    var code = (evt.which) ? evt.which : evt.keyCode;
-    if(code==45) { 
-      return false;
-    } else if((code>=48 && code<=57) && (code==8)) {
-      return true;
-    } else{
-      return false;
-    }
-	}
+			} else {
+				alert("Error :(");
+			}
 
-	if (x >=0 && y >= 0)
-	{
-		document.getElementById("result").innerHTML = "The result is "  + z + ".";
-		alert(document.getElementById("result").innerHTML);
-		console.log(z);
-		
-	} else {
-		alert ("Error :(");
-	}
-
-	if (divi && modul == 0)
-	{
-		alert("It’s over 9000!");
-	}
-}
-
-// setTimeout(function(){ alert("Please, use me"); }, 3000);
-setTimeout(saludo, 30000);
-function saludo(){
- alert("Please, use me");
-}
-</script>
+			if (divi && modul == 0) {
+				alert("It’s over 9000!");
+			}
+		}
+		// setTimeout(function(){ alert("Please, use me"); }, 3000);
+		setTimeout(saludo, 30000);
+		function saludo() {
+			alert("Please, use me");
+		}
+	</script>
 </head>
-
 <body>
 	<div class="container">
-    <p>If you want to make a calculation, enter the numbers and choose the corresponding option:</p>
-    <input type="text" id="firstNum" pattern="[0-9]+"/>
-    <select id="fallDown">
-    	<option>Choose</option>
-   		<option value="add" id="add">+</option>
-   		<option value="less" id="less">-</option>
-    	<option value="multi" id="multi">*</option>
-    	<option value="divi" id="divi">/</option>
-		<option value="modul" id="modul">%</option>
-	</select>
-    <input type="text" id="secNum" pattern="[0-9]+"/><br>
-	<input type="submit" value="Try Me!" onclick="calcuMath()">
-    <!-- <button onclick="calcuMath()">Try me!</button> -->
-    <p id="result"></p>
+		<p>If you want to make a calculation, enter the numbers and choose the corresponding option:</p>
+		<input type="text" id="firstNum" pattern="[0-9]+" />
+		<select id="fallDown">
+			<option>Choose</option>
+			<option value="add" id="add">+</option>
+			<option value="less" id="less">-</option>
+			<option value="multi" id="multi">*</option>
+			<option value="divi" id="divi">/</option>
+			<option value="modul" id="modul">%</option>
+		</select>
+		<input type="text" id="secNum" pattern="[0-9]+" /><br>
+		<input type="submit" value="Try Me!" onclick="calcuMath()">
+		<!-- <button onclick="calcuMath()">Try me!</button> -->
+		<p id="result"></p>
 	</div>
 </body>
 </html>
