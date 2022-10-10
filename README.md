@@ -91,7 +91,7 @@ Distributed under the [MIT](https://choosealicense.com/licenses/mit/) License. S
 <br>
 
 ## Holygraph 🌌
-![42's discovery](images/discovery_piscine.png)
+![42's discovery](images/holygraph.png)
 <!-- ACKNOWLEDGEMENTS
 ## Acknowledgements
 
